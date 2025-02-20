@@ -1,13 +1,5 @@
 import * as React from "react";
 
-// function Header({headerName}: {headerName: string}) {
-//     return (
-//         <header className="terminal-banner">
-//             <h1 className="terminal-prompt">{headerName}</h1>
-//         </header>
-//     );
-// }
-
 type HeaderProps = {
     headerName: string;
 }

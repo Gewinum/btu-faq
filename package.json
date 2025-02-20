@@ -10,9 +10,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "vitest",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.2.0",
+    "jsdom": "^26.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "terminal.css": "^0.7.5"
@@ -28,6 +32,7 @@
     "globals": "^15.14.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
+    "vite": "^6.1.0",
+    "vitest": "^3.0.6"
   }
 }

@@ -35,6 +35,7 @@ jobs:
       - env:
           PUBLIC_URL: ${{vars.PUBLIC_URL}}
         run: yarn build
+      - run: yarn test
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
