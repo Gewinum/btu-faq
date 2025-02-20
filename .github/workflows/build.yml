@@ -21,6 +21,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      PUBLIC_URL: "https://gewinum.github.io/btu-faq/"
     strategy:
       matrix:
         node-version: [22.x]
