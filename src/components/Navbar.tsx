@@ -7,7 +7,7 @@ type NavbarProps = {
 class Navbar extends React.Component<NavbarProps> {
     render() {
         return (
-            <nav className={"terminal-toc"}>
+            <nav className={"terminal-menu"}>
                 <ul>
                     {Object.entries(this.props.sections).map(([identifier, prettyName]) => (
                         <li key={identifier} style={{fontSize: "20px"}}>
