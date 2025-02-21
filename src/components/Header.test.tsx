@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import {render} from "@testing-library/react";
-import Header from "./Header";
+import Header from "./Header.tsx";
 
 test("Header", () => {
   const {getByText} = render(<Header headerName="testing-header" />);

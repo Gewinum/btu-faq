@@ -10,7 +10,7 @@ class QuestionSections extends React.Component<QuestionSectionsProps> {
         return (
             <div>
                 {Object.entries(this.props.sections).map(([sectionName, questions]) => (
-                    <section id={sectionName} className="terminal-section">
+                    <section key={sectionName} id={sectionName} className="terminal-section">
                         <QuestionSection sectionName={sectionName} questions={questions} />
                     </section>
                 ))}
