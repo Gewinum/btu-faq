@@ -2,7 +2,9 @@ const data = {
     name: 'BTU FAQ',
     navigation: {
         credits: 'Credits',
-        technical: "Technical"
+        technical: "Technical",
+        it: 'IT',
+        general: "General"
     },
     questions: {
         credits: [
@@ -27,6 +29,22 @@ const data = {
             [
                 'როგორ ავიღო Office პროდუქტების ლიცენზია?',
                 'ამისათვის უნდა მიწეროთ [IT სამსახურს](https://btuserv.atlassian.net/servicedesk/customer/portal/4)'
+            ],
+            [
+                'რატომ ვერ შევდივარ jira-ში?',
+                'ჯერ საჭიროა, დარეგისტრირდეთ(აუცილებელი არაა, ბითიუს მეილი ჩაწეროთ) და მერე შეძლებთ შევლას'
+            ]
+        ],
+        it: [
+            [
+                'რა ენა ისწავლება Android Development-ის კურსზე?',
+                'ლექტორის ნებაზეა დამოკიდებული. შეიძლება გასწავლოს ან java, ან kotlin'
+            ]
+        ],
+        general: [
+            [
+                "ინგლისურის რა დონეა აუცილებელი?",
+                "აუცილებელია B2. შეგიძლიათ ასევე მიიტანოთ ინგლისური ენის დამადასტურებელი სერტიფიკატი."
             ]
         ]
     }
