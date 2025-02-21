@@ -1,4 +1,6 @@
 import * as React from "react";
+import Markdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 
 type QuestionSectionProps = {
     sectionName: string;
@@ -13,8 +15,10 @@ class QuestionSection extends React.Component<QuestionSectionProps> {
                 <ul>
                     {this.props.questions.map((question, index) => (
                         <li key={index}>
-                            <h3 className="terminal-prompt">{question[0]}</h3>
-                            <p>{question[1]}</p>
+                            <Markdown components={{
+                                p: "h3",
+                            }} remarkPlugins={[remarkGfm]}>{question[0]}</Markdown>
+                            <Markdown remarkPlugins={[remarkGfm]}>{question[1]}</Markdown>
                         </li>
                     ))}
                 </ul>

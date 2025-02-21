@@ -2,6 +2,7 @@ const data = {
     name: 'BTU FAQ',
     navigation: {
         credits: 'Credits',
+        technical: "Technical"
     },
     questions: {
         credits: [
@@ -21,6 +22,12 @@ const data = {
                 'საგანი თუ შემეტენა, როდის უნდა გადავიხადო მისი საფასური?',
                 'თანხას იხდით მხოლოდ მაშინ, როდესაც დამატებითი კრედიტების აღებას გეგმავთ, ანუ 30 კრედიტის გარდა კიდევ იმ საგანს რომ იღებთ'
             ],
+        ],
+        technical: [
+            [
+                'როგორ ავიღო Office პროდუქტების ლიცენზია?',
+                'ამისათვის უნდა მიწეროთ [IT სამსახურს](https://btuserv.atlassian.net/servicedesk/customer/portal/4)'
+            ]
         ]
     }
 }
