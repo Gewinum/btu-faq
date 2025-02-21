@@ -12,6 +12,10 @@ const styles = {
     officialFaqLink: {
         fontSize: "1.5rem",
         marginBottom: "20px",
+        marginLeft: "0.8rem"
+    },
+    content: {
+        padding: "0.5rem",
     }
 }
 
@@ -26,7 +30,7 @@ class App extends React.Component {
                 <section style={styles.officialFaqLink}>
                     <a href="https://btu.edu.ge/faq/">BTU'S Official FAQ</a>
                 </section>
-                <section>
+                <section style={styles.content}>
                     <QuestionSections sections={data.questions} />
                 </section>
             </div>
