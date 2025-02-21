@@ -14,7 +14,7 @@ class QuestionSections extends React.Component<QuestionSectionsProps> {
                         <ul>
                             {questions.map((question, index) => (
                                 <li key={index}>
-                                    <h3 className="terminal-prompt">{question[0]}</h3>
+                                    <h3>{question[0]}</h3>
                                     <p>{question[1]}</p>
                                 </li>
                             ))}
