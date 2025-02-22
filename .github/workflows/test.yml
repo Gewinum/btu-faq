@@ -19,8 +19,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Deno
-        run: curl -fsSL https://deno.land/install.sh | sh
+      - name: Install deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
       - name: Build for production
         run: deno task build
       - name: Test
