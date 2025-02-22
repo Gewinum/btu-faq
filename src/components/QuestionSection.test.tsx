@@ -1,27 +1,19 @@
 import { test, expect } from "vitest";
 import {render} from "@testing-library/react";
 import QuestionSection from "./QuestionSection.tsx";
+import {Section} from "../assets/data.tsx";
 
 test("QuestionSection", () => {
-    const sectionName = "Some name";
-
-    const questions = [
-        [
-            "What is the capital of France?",
-            "Paris"
-        ],
-        [
-            "What is the capital of Germany?",
-            "Berlin"
-        ],
-        [
-            "What is the capital of Italy?",
-            "Rome"
+    const sectionInfo: Section = {
+        name: "some name",
+        questions: [
+            ["question1", "answer1"],
+            ["question2", "answer2"]
         ]
-    ];
-    const {getByText} = render(<QuestionSection sectionName={sectionName} questions={questions} />);
-    expect(getByText(sectionName)).not.toBeNull();
-    for (const question of questions) {
+    };
+    const {getByText} = render(<QuestionSection name={sectionInfo.name} questions={sectionInfo.questions} />);
+    expect(getByText(sectionInfo.name)).not.toBeNull();
+    for (const question of sectionInfo.questions) {
         expect(getByText(question[0])).not.toBeNull();
         expect(getByText(question[1])).not.toBeNull();
     }
