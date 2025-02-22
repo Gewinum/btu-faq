@@ -19,9 +19,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - env:
-          PUBLIC_URL: ${{vars.PUBLIC_URL}}
-        run: yarn build
-      - run: yarn test
+      - name: Install deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Build for production
+        run: deno task build
+      - name: Test
+        run: deno task test

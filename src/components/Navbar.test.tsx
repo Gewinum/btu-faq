@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import {render} from "@testing-library/react";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.tsx";
 
 test("Navbar", () => {
   const {getByText} = render(<Navbar sections={{section1: "Section 1", section2: "Section 2"}} />);

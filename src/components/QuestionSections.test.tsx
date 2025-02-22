@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import {render} from "@testing-library/react";
-import QuestionSections from "./QuestionSections";
+import QuestionSections from "./QuestionSections.tsx";
 
 test("QuestionSections", () => {
     const sections = {
