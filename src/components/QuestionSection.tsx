@@ -1,17 +1,18 @@
 import * as React from "react";
 import Markdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
+import {Section} from "../assets/data.tsx";
 
 type QuestionSectionProps = {
     sectionName: string;
     questions: Array<Array<string>>;
 }
 
-class QuestionSection extends React.Component<QuestionSectionProps> {
+class QuestionSection extends React.Component<Section> {
     render() {
         return (
-            <section id={this.props.sectionName} className="terminal-section">
-                <h2 className="terminal-prompt">{this.props.sectionName}</h2>
+            <section key={this.props.name} className="terminal-section">
+                <h2 className="terminal-prompt">{this.props.name}</h2>
                 <ul>
                     {this.props.questions.map((question, index) => (
                         <li key={index}>

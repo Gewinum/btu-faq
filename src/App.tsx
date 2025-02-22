@@ -25,13 +25,13 @@ class App extends React.Component {
             <div id="app">
                 <header className="terminal-nav terminal-banner" style={styles.header}>
                     <Header headerName="BTU FAQ" />
-                    <Navbar sections={data.navigation} />
+                    <Navbar sections={data.sections} />
                 </header>
                 <section style={styles.officialFaqLink}>
                     <a href="https://btu.edu.ge/faq/">BTU'S Official FAQ</a>
                 </section>
                 <section style={styles.content}>
-                    <QuestionSections sections={data.questions} />
+                    <QuestionSections sections={data.sections} />
                 </section>
             </div>
         );

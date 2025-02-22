@@ -1,7 +1,8 @@
 import * as React from "react";
+import {Section} from "../assets/data.tsx";
 
 type NavbarProps = {
-    sections: {[key: string]: string};
+    sections: Array<Section>
 }
 
 class Navbar extends React.Component<NavbarProps> {
@@ -9,9 +10,9 @@ class Navbar extends React.Component<NavbarProps> {
         return (
             <nav className="terminal-menu">
                 <ul>
-                    {Object.entries(this.props.sections).map(([identifier, prettyName]) => (
-                        <li key={identifier} style={{fontSize: "20px"}}>
-                            <a href={`#${identifier}`}>{prettyName}</a>
+                    {this.props.sections.map((section) => (
+                        <li key={section.name} style={{fontSize: "20px"}}>
+                            <a href={`#${section.name}`}>{section.name}</a>
                         </li>
                     ))}
                 </ul>
