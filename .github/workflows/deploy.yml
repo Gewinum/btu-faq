@@ -28,12 +28,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-      - run: yarn install --frozen-lockfile
-      - env:
-          PUBLIC_URL: ${{vars.PUBLIC_URL}}
-        run: yarn build
-      - run: yarn test
+      - name: Install Deno
+        run: curl -fsSL https://deno.land/install.sh | sh
+      - name: Build for production
+        run: deno task build
+      - name: Test
+        run: deno task test
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
